@@ -16,7 +16,7 @@ public class ItemManagementPanel : MonoBehaviour {
         RefreshPotions();
     }
     
-    void RefreshPotions() {
+    public void RefreshPotions() {
         foreach (Transform child in potionContainer) {
             Destroy(child.gameObject);
         }
