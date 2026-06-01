@@ -1,0 +1,5 @@
+# 忽略的文件
+node_modules/
+.DS_Store
+*.log
+*.tmp
