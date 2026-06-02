@@ -16,7 +16,7 @@ public class ItemManagementPanel : MonoBehaviour {
         RefreshPotions();
     }
     
-    void RefreshPotions() {
+    public void RefreshPotions() {
         foreach (Transform child in potionContainer) {
             Destroy(child.gameObject);
         }
@@ -50,7 +50,7 @@ public class ItemManagementPanel : MonoBehaviour {
                 GameManager.Instance.playerEnergy = Mathf.Min(GameManager.Instance.playerEnergy + potion.value, 10);
                 break;
             case "attack":
-                // 攻击加成逻辑
+                GameManager.Instance.playerAttack += potion.value;
                 break;
             case "gold":
                 GameManager.Instance.playerGold += Mathf.FloorToInt(GameManager.Instance.playerGold * potion.value);

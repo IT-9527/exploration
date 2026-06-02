@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour {
     public int playerHealth;
     public int playerEnergy;
     public int playerGold;
+    public int playerAttack;
     public int currentFloor;
     public int playerLevel;
     public int playerExp;
