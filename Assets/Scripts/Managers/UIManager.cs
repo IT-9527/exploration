@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour {
     public BattlePanel battlePanel;
     public CharacterDetailsPanel characterDetailsPanel;
     public ItemManagementPanel itemManagementPanel;
+    public ShopPanel shopPanel;
     
     void Awake() {
         if (Instance == null) {
@@ -43,6 +44,9 @@ public class UIManager : MonoBehaviour {
             case PanelType.ItemManagement:
                 itemManagementPanel.gameObject.SetActive(true);
                 break;
+            case PanelType.Shop:
+                shopPanel.gameObject.SetActive(true);
+                break;
         }
     }
     
@@ -53,6 +57,7 @@ public class UIManager : MonoBehaviour {
         battlePanel.gameObject.SetActive(false);
         characterDetailsPanel.gameObject.SetActive(false);
         itemManagementPanel.gameObject.SetActive(false);
+        shopPanel.gameObject.SetActive(false);
     }
     
     public enum PanelType {
@@ -61,6 +66,7 @@ public class UIManager : MonoBehaviour {
         MapSelect,
         Battle,
         CharacterDetails,
-        ItemManagement
+        ItemManagement,
+        Shop
     }
 }

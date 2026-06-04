@@ -132,6 +132,13 @@ public class CardData {
     public int damage;
     public int cost;
     public string description;
+    public string type;
+    public int blockValue;
+    public int heal;
+    public int hits;
+    public bool lifesteal;
+    public int energyRestore;
+    public string characterType;
 }
 
 public class CardHand : MonoBehaviour {
